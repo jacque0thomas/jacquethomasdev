@@ -1,5 +1,17 @@
-<h1>About Me</h1>
 
-<h2><%= @blurb.title %></h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8">
+  </head>
+</html>
 
-<p><%= @blurb.body %></p>
+
+<div class="container-fluid pt-5 pb-3 bg-dark text-white">
+  <h1>About Me</h1>
+</div>
+<div class="container-fluid pt-2 bg-primary text-white">
+  <h4><%= @blurb.title %></h4>
+  <p><%= @blurb.body %></p>
+</div>

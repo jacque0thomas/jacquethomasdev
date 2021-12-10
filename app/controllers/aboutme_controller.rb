@@ -3,6 +3,7 @@ class AboutmeController < ApplicationController
     @blurb = Blurb.find(1)
   end
 
+  #needed?
   def show
     @blurb = Blurb.find(1)
   end

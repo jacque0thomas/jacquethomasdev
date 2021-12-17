@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'blurb/index'
   get 'aboutme/about'
   root "homepage#home"
 

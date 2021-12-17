@@ -1,0 +1,2 @@
+module BlurbHelper
+end

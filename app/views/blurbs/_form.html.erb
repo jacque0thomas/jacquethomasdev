@@ -10,18 +10,20 @@
 <%= form_with model: blurb do |form| %>
   <div class="container-fluid center p-5 helvetica">
     <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.text_field :title  %>
     <% blurb.errors.full_messages_for(:title).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>
 
   <div class="container-fluid p-5 bg-dark text-light">
-    <%= form.label :body %><br>
-    <%= form.text_area :body %><br>
-    <% blurb.errors.full_messages_for(:body).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
+    <div class="form-group">
+      <%= form.label :body %><br>
+      <%= form.text_area :body, class: "form-control", rows: 20 %><br>
+      <% blurb.errors.full_messages_for(:body).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
   </div>
 
   <div class="container-fluid p-5 bg-dark text-light">

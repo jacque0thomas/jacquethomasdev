@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'blurb/index'
+  get 'blurbs/index'
   get 'aboutme/about'
   root "homepage#home"
 
-  
+  resources :blurbs
   get "/aboutme", to: "aboutme#about"
 
   get "/homepage", to: "homepage#home"

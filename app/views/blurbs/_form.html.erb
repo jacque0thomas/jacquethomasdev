@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blurbs</title>
+    <meta charset="utf-8">
+  </head>
+</html>
+
+<%= form_with model: blurb do |form| %>
+  <div class="container-fluid center p-5 helvetica">
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% blurb.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="container-fluid p-5 bg-dark text-light">
+    <%= form.label :body %><br>
+    <%= form.text_area :body %><br>
+    <% blurb.errors.full_messages_for(:body).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="container-fluid p-5 bg-dark text-light">
+    <%= form.submit %>
+  </div>
+<% end %>

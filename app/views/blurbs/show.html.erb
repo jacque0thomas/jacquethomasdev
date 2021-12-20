@@ -6,17 +6,15 @@
   </head>
 </html>
 
-
+<body>
 <div class="container-fluid center p-5 helvetica">
   <h1><%= @blurb.title %></h1>
 </div>
 <div class="container-fluid p-5 bg-dark text-light">
+  <%= link_to "<button>Edit</button>".html_safe, edit_blurb_path(@blurb) %>
+  <%= link_to "<button>Destroy</button>".html_safe, blurb_path(@blurb),
+                  method: :delete,
+                  data: {confirm: "Are you sure?" } %><br>
   <p><%= simple_format(@blurb.body) %></p>
 </div>
-
-<ul>
-  <li><%= link_to "Edit", edit_blurb_path(@blurb) %></li>
-  <li><%= link_to "Destroy", blurb_path(@blurb),
-                  method: :delete,
-                  data: {confirm: "Are you sure?" } %></li>
-</ul>
+</body>
